@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta name="description" content="Temporizador estilo pomodoro" />
+        <!--ajuda nos sistemas de busca-->
+        <title>Focus Timer V2</title>
+
+        <link
+            rel="shortcut icon"
+            href="./assets/favicon.svg"
+            type="image/x-svg"
+        />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="./style.css" />
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <script type="module" src="src/main.js" defer></script>
+    </head>
+    <body>
+        <div id="app">
+            <div class="functions">
+                <section id="timer">
+                    <span data-action="set" id="minutes">00</span>
+                    <span>:</span>
+                    <span id="seconds">00</span>
+                </section>
+                <section id="controls">
+                    <button data-action="runMode" class="ph ph-play-circle">
+                        <span class="sr-only">Iniciar contador</span>
+                    </button>
+
+                    <button data-action="stopMode" class="ph ph-stop-circle">
+                        <span class="sr-only">Pausar contador</span>
+                    </button>
+
+                    <button data-action="plusMode" class="ph ph-plus-circle">
+                        <span class="sr-only">Aumentar 5 minutos</span>
+                    </button>
+
+                    <button data-action="minusMode" class="ph ph-minus-circle">
+                        <span class="sr-only">Diminuir 5 minutos</span>
+                    </button>
+                </section>
+            </div>
+
+            <div class="types" id="types">
+                <button data-action="treeMusic" class="tree">
+                    <img
+                        data-action="treeMusic"
+                        src="./assets/tree.svg"
+                        alt="Ilustração de árvore"
+                    />
+                    <span class="sr-only">Som de natureza</span>
+                </button>
+                <button data-action="rainMusic" class="rain">
+                    <img
+                        data-action="rainMusic"
+                        src="./assets/rain.svg"
+                        alt="Ilustração de chuva"
+                    />
+                    <span class="sr-only">Som de chuva</span>
+                </button>
+                <button data-action="shopMusic" class="shop">
+                    <img
+                        data-action="shopMusic"
+                        src="./assets/shop.svg"
+                        alt="Ilustração de cafeteria"
+                    />
+                    <span class="sr-only">Som de cafeteria</span>
+                </button>
+                <button data-action="fireMusic" class="fire">
+                    <img
+                        data-action="fireMusic"
+                        src="./assets/fire.svg"
+                        alt="Ilustração de fogueira"
+                    />
+                    <span class="sr-only">Som de fogueira</span>
+                </button>
+            </div>
+        </div>
+    </body>
+</html>

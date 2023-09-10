@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-smoothing: grayscale;
+}
+
+:root {
+    font-size: clamp(40%, 1 + 2vw, 62.5%);
+
+    --primary-color: hsla(240, 6%, 21%, 1);
+    --bt-bg: hsla(240, 9%, 89%, 1);
+    --secondary-bg: hsla(194, 97%, 31%, 1);
+}
+
+.sr-only {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    appearance: none;
+}
+
+html,
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+#app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    place-items: center;
+}
+
+#timer {
+    font-size: 11rem;
+    display: flex;
+    justify-content: center;
+}
+
+#controls {
+    display: flex;
+    gap: 3.5rem;
+    justify-content: center;
+}
+
+#controls button {
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+    
+    font-size: 4rem;
+}
+
+.types .musicon {
+    background-color: var(--secondary-bg);
+}
+
+.types .musicon img {
+    filter: invert(100%);
+}
+
+.types {
+    display: grid;
+    max-width: 30rem;
+    max-height: 33.6rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+}
+
+.types button {
+    border: none;
+    background-color: var(--bt-bg);
+    
+    cursor: pointer;
+
+    width: 10rem;
+    height: 10rem;
+    
+    border-radius: 24px;
+}
+
+.types button img {
+    width: 4rem;
+    height: 4rem;
+}
+
+/* controls */
+.running .ph-play-circle,
+html:not(.running) .ph-stop-circle {
+    display: none;
+}
